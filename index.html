@@ -1,45 +1,10 @@
-<script>
-  function decode(code) {
-    try {
-      return atob(code);
-    } catch {
-      return "Someone|You";
-    }
-  }
-
-  const hash = window.location.hash.replace("#", "");
-  const params = new URLSearchParams(window.location.search);
-  const raw = hash || params.get("v");
-
-  let from = "Someone";
-  let to = "You";
-
-  if (raw) {
-    const decoded = decode(raw);
-    if (decoded.includes("|")) {
-      [from, to] = decoded.split("|");
-    }
-  }
-
-  document.getElementById("title").innerText = `Hi ${to},`;
-
-  document.getElementById("message").innerText =
-`I didn’t want to make this dramatic.
-
-I just wanted to be honest.
-
-You’ve been on my mind,
-and being around you feels natural.
-
-So I thought I’d ask…
-
-Would you like to be my Valentine?
-
-— ${from}`;
-
-  document.getElementById("yesBtn").onclick = () => {
-    document.getElementById("message").style.display = "none";
-    document.getElementById("yesBtn").style.display = "none";
-    document.getElementById("finalMsg").style.display = "block";
-  };
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+</head>
+<body>
+  <h1>Hello 👋</h1>
+  <p>If you can see this, GitHub Pages is working.</p>
+</body>
+</html>
